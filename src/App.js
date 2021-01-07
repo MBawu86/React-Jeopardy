@@ -25,12 +25,32 @@ class App extends Component {
   }
 
   render() {
+
+    var { isLoaded, items } = this.state;
+
+    if (!isLoaded) {
+      return <div>Loading...</div>;
+    }
+
+    else {
+
     return (
       <div className= "App">
 
+          <ul>
+            {items.map(item => (
+              <li key={item.id}>
+                Answer: {item.answer} | Question: {item.question}
+              </li>
+
+            ))};
+          </ul>
       </div>
     );
   }
+
+}
+
 } 
 
 
