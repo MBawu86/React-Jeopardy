@@ -1,7 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
+class App extends Component {
+
+  const(props) {
+    super(props);
+    this.state = {
+      items: [],
+      isLoaded: false,
+
+    }
+  }
+
+  componentDidMount() {
+    
+    fetch('http://jservice.io/api/random')
+    .then(res => res.json())
+    .then(json => {
+      this.setState({
+        isLoaded: true,
+        items: json,
+      })
+    });
+
+  }
+
+  render() {
+    return (
+      <div className= "App">
+
+      </div>
+    );
+  }
+} 
+
+
+
+
+
+/*
   return (
     <div className="App">
       <header className="App-header">
@@ -21,5 +57,6 @@ function App() {
     </div>
   );
 }
+*/
 
 export default App;
