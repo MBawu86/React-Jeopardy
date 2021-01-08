@@ -60,4 +60,29 @@ class App extends Component {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+/*
+  return (
+    <div className="App">
+     <header>
+       <h1> JEOPARDY </h1>
+     </header>
+       <ul>
+         {items.map(item => (
+            <li key={item.id}>
+             value:${item.value},
+             question: {item.question} | answer: {item.answer}
+
+            </li>
+         ))};
+       </ul>
+    </div>
+  );
+}
+*/
+
+>>>>>>> 7e9eb52f717d9b23cb7c5b719117a1f1b95d25a6
 export default App;
