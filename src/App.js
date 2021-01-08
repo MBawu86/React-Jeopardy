@@ -1,35 +1,63 @@
-import React, {Component} from 'react';
-
+import React, { Component } from 'react';
 
 class App extends Component {
-  constructor(props) {
+
+  const(props) {
     super(props);
     this.state = {
       items: [],
       isLoaded: false,
+
     }
   }
 
-componentDidMount(){
+  componentDidMount() {
+    
+    fetch('http://jservice.io/api/random')
+    .then(res => res.json())
+    .then(json => {
+      this.setState({
+        isLoaded: true,
+        items: json,
+      })
+    });
 
-  fetch('http://jservice.io/api/random')
-  .then(res => res.json())
-  .then(json => {
-    this.setState({
-      isLoaded: true,
-      items: json,
-    })
-  });
-}
-
-render() {
-  var{ isLoaded, items } = this.state;
-
-  if(!isLoaded) {
-    return <div> Loading...</div>
   }
 
-  else {
+  render() {
+
+    var { isLoaded, items } = this.state;
+
+    if (!isLoaded) {
+      return <div>Loading...</div>;
+    }
+
+    else {
+
+    return (
+      <div className= "App">
+
+          <ul>
+            {items.map(item => (
+              <li key={item.id}>
+                Answer: {item.answer} | Question: {item.question}
+              </li>
+
+            ))};
+          </ul>
+      </div>
+    );
+  }
+
+}
+
+} 
+
+
+
+
+
+/*
   return (
     <div className="App">
      <header>
@@ -47,7 +75,6 @@ render() {
     </div>
   );
 }
-}
-}
+*/
 
 export default App;
