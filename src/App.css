@@ -1,7 +1,13 @@
 .App {
+<<<<<<< HEAD
+    text-align: center;
+    font-family: 'Notable', sans-serif;
+}
+=======
   text-align: center;
 }
 
+<<<<<<< HEAD
 .App-header {
   background-color: #282c34;
   min-height: 15vh;
@@ -27,5 +33,21 @@
 
 .App-link {
   color: #61dafb;
+=======
+
+>>>>>>> 7e9eb52f717d9b23cb7c5b719117a1f1b95d25a6
+
+.App-header {
+    background-color: #500681f5;
+    height: 100px;
+    display: flex;
+    flex-direction: colunm;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+    font-family: 'Notable', sans-serif;
+
+>>>>>>> cbe420e47223f059f4d926f39b16af8beb94de1e
 }
 

@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 /* import React, { Component } from 'react';
 import './App.css'
 
 class App extends Component {
   constructor(){
   super();     
+=======
+import React, { Component } from 'react';
+import './App.css'
+
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+>>>>>>> cbe420e47223f059f4d926f39b16af8beb94de1e
     this.state = {
       items: [],
       isLoaded: false,
@@ -39,12 +49,24 @@ class App extends Component {
     else {
 
     return (
+<<<<<<< HEAD
+=======
+      <div className= "App">
+        <header className="App-header">
+          <h1>Jeopardy! App </h1>
+        </header>
+>>>>>>> cbe420e47223f059f4d926f39b16af8beb94de1e
 
       <div className= "App">
           <ul>
             {items.map(item => (
               <li key={item.id}>
+<<<<<<< HEAD
                 Answer: {item.answer} | Question: {item.question} | value:${item.value}
+=======
+                Answer: {item.answer} |
+                Question: {item.question}
+>>>>>>> cbe420e47223f059f4d926f39b16af8beb94de1e
               </li>
             ))};
           </ul>
@@ -53,6 +75,7 @@ class App extends Component {
             }
 };
 
+<<<<<<< HEAD
 export default App
 */
 
@@ -109,3 +132,6 @@ class App extends Component {
 }
 }
 export default App;
+=======
+export default App;
+>>>>>>> cbe420e47223f059f4d926f39b16af8beb94de1e
