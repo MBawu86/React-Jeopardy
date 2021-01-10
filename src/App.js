@@ -4,18 +4,14 @@ import { Container, Row, Col, Button, Card, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
-
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       items: [],
       isLoaded: false,
-
     }
   }
-
   componentDidMount() {
-    
     fetch('http://jservice.io/api/random')
     .then(res => res.json())
     .then(json => {
@@ -23,33 +19,20 @@ class App extends Component {
         isLoaded: true,
         items: json,
       })
-    });
-
+    })
   }
-
   render() {
-
     var { isLoaded, items } = this.state;
-
     if (!isLoaded) {
       return <div>Loading...</div>;
     }
-
     else {
-
     return (
       <div className= "App">
         <header className="App-header">
           <h1>Jeopardy! App </h1>
         </header>
-          {/* { <ul>
-            {items.map(item => (
-              <li key={item.id}>
-                Answer: {item.answer} |
-                Question: {item.question}
-              </li>
-          </ul> } */}
-              <Container>
+        <Container>
           <Form>
             <Row>
               <Col md>
@@ -70,15 +53,20 @@ class App extends Component {
         </Card>   
         </Container>        
             ))};
-
-      </div>
-    );
-  }
-
+            
+            </div>
+            );
+          }
 }
-
-} 
-
-
-
+}
 export default App;
+
+{/* { <ul>
+  {items.map(item => (
+    <li key={item.id}>
+      value:${item.value} |
+      Question: {item.question} |
+      Answer: {item.answer} |
+      Question: {item.question}
+    </li>
+</ul> } */}
