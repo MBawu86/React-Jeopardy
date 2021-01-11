@@ -1,20 +1,18 @@
 
 import React, { Component } from 'react';
-import './App.css'
+import './App.css';
+
+
 
 class App extends Component {
-
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       items: [],
       isLoaded: false,
-
     }
   }
-
   componentDidMount() {
-    
     fetch('http://jservice.io/api/random')
     .then(res => res.json())
     .then(json => {
@@ -22,20 +20,14 @@ class App extends Component {
         isLoaded: true,
         items: json,
       })
-    });
-
+    })
   }
-
   render() {
-
     var { isLoaded, items } = this.state;
-
     if (!isLoaded) {
       return <div>Loading...</div>;
     }
-
     else {
-
     return (
       <div className= "App">
         <div className ="Card">
@@ -60,11 +52,17 @@ class App extends Component {
       </div>
     );
   }
-
 }
 
-} 
-
-
-
+}
 export default App;
+
+/* { <ul>
+  {items.map(item => (
+    <li key={item.id}>
+      value:${item.value} |
+      Question: {item.question} |
+      Answer: {item.answer} |
+      Question: {item.question}
+    </li>
+</ul> } */

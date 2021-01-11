@@ -1,7 +1,6 @@
 
 .App {
     text-align: center;
-    /*height: 500%;*/
     background-image: url('./components/images/jeopardyTwo.jpg');
     position: fixed;
     min-width: 100%;
