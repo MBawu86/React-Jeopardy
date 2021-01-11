@@ -34,7 +34,7 @@
     font-family: 'Notable', sans-serif;
 }
 
-.button, .btn {
+.btn {
     position: relative;
     outline: none;
     text-decoration: none;
@@ -50,11 +50,12 @@
     background-color: #ffffff;
     border: 1px solid rgba(22, 76, 167, 0.6);
     font-family: 'Notable', sans-serif;
+    margin: 10px 0;
   }
 
   
     
-  .button span {
+  .button button span {
     color: #164ca7;
     font-size: 12px;
     font-weight: 500;

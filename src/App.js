@@ -62,6 +62,7 @@ fetch('http://jservice.io/api/random')
               <li key={item.id}>
                 <h3>Value: ${item.value}</h3>
                 <h3>Question: {item.question}</h3> 
+
                 {
                   this.state.showMe?
                   <div>
@@ -69,14 +70,14 @@ fetch('http://jservice.io/api/random')
                   </div>
                   :null
                 }
+                </li>
+              ))}
+            </ul>
                   <div className= "button">
                   <button className= "btn btn-default" onClick={()=>this.operation()}> 
                   <span>Reveal Answer</span>
                   </button>
                   </div>
-              </li>
-            ))}
-          </ul>
 
           <div className ="button"> 
           <button className= "btn btn-default" onClick={()=>this.jeopardy()}>
