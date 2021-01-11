@@ -20,8 +20,19 @@ class App extends Component {
     })
   }
 
-  componentDidMount() {
-    fetch('http://jservice.io/api/random')
+jeopardy() {    
+fetch('http://jservice.io/api/random')
+.then(res => res.json())
+.then(json => {
+  this.setState({
+    isLoaded: true,
+    items: json,
+  })
+})
+
+}
+  componentDidMount() {this.jeopardy()
+    /*fetch('http://jservice.io/api/random')
     .then(res => res.json())
     .then(json => {
       this.setState({
@@ -29,6 +40,7 @@ class App extends Component {
         items: json,
       })
     })
+    */
   }
 
   render() {
@@ -57,21 +69,22 @@ class App extends Component {
                   </div>
                   :null
                 }
-
-                  <button onClick={()=>this.operation()}>Answer Revel
+                  <div className= "button">
+                  <button className= "btn btn-default" onClick={()=>this.operation()}> 
+                  <span>Reveal Answer</span>
                   </button>
+                  </div>
               </li>
             ))}
           </ul>
 
           <div className ="button"> 
-          <button className= "btn btn-default" onClick={this.fetch}>
+          <button className= "btn btn-default" onClick={()=>this.jeopardy()}>
             <span>Next question, Alex</span>
           </button>
-
           </div>
           </div>
-      </div>
+          </div>
     );
   }
 }
