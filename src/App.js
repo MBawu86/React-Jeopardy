@@ -2,9 +2,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import HeroImage from './components/images/HeroImage.js';
-import { Container, Row, Col, Button, Alert, Breadcrumb, Card, Form } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 class App extends Component {
   constructor(props) {
@@ -32,26 +31,29 @@ class App extends Component {
     else {
     return (
       <div className= "App">
+        <div className ="Card">
         <header className="App-header">
           <h1>Jeopardy! App </h1>
         </header>
-            {/* <HeroImage/> */}
-            <div className='HeroImage'>
-      <img src='https://i.imgur.com/bZj78qm.jpg'/> 
-    </div>
           <ul>
             {items.map(item => (
               <li key={item.id}>
-                value:${item.value} |
-                Question: {item.question} |
-                Answer: {item.answer} |
-                </li>
-            ))};
+                <h3>Value: ${item.value}</h3>
+                <h3>Question: {item.question}</h3> 
+                Answer: {item.answer} 
+              </li>
+            ))}
           </ul>
+
+          <button className ="button" onClick={this.fetch}>
+            <span>Next question, Alex</span>
+          </button>
+          </div>
       </div>
     );
   }
 }
+
 }
 
 function JCard() {
@@ -86,3 +88,13 @@ function JCard() {
 
 
 export default App;
+
+/* { <ul>
+  {items.map(item => (
+    <li key={item.id}>
+      value:${item.value} |
+      Question: {item.question} |
+      Answer: {item.answer} |
+      Question: {item.question}
+    </li>
+</ul> } */

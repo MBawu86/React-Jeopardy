@@ -1,22 +1,69 @@
+
 .App {
     text-align: center;
+    background-image: url('./components/images/jeopardyTwo.jpg');
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Notable', sans-serif;
-
-  text-align: center;
+    color: black;
 }
 
-.HeroImage{
-  padding: 15%;
-  background-image: url("https://i.imgur.com/bZj78qm.jpg");
-   background-repeat: no-repeat; 
-  background-size: cover;
-  width: 65%;
- height: 25vh;
+.Card {
+        background: whitesmoke;
+        width: 40%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 25px;
+        padding: 2%;
+        box-shadow: 10px 10px;  
+        font-family: 'Orbitron', sans-serif; 
+}
+  
+.heading {
+    display: flex;
+    align-items: center;
+    height: 580px;
+    font-family: 'Notable', sans-serif;
 }
 
+.button {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 20px;
+    width: 210px;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+    font-family: 'Notable', sans-serif;
+  }
+    
+  .button span {
+    color: #164ca7;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+  }
+  
 
+
+/*
 .App-header {
-    background-color: #500681f5;
+    background-color: #c99ff9;
     height: 100px;
     display: flex;
     flex-direction: colunm;
@@ -26,4 +73,15 @@
     color: black;
     font-family: 'Notable', sans-serif;
 }
+*/
 
+
+
+/*
+.body {
+    background-image: url('./components/images/heroImage.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    height: 500%;
+}
+*/
