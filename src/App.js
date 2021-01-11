@@ -3,15 +3,23 @@ import React, { Component } from 'react';
 import './App.css';
 
 
-
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
       items: [],
       isLoaded: false,
+      showMe: false
     }
   }
+
+  operation()
+  {
+    this.setState({
+      showMe:true
+    })
+  }
+
   componentDidMount() {
     fetch('http://jservice.io/api/random')
     .then(res => res.json())
@@ -22,12 +30,14 @@ class App extends Component {
       })
     })
   }
+
   render() {
     var { isLoaded, items } = this.state;
     if (!isLoaded) {
       return <div>Loading...</div>;
     }
     else {
+
     return (
       <div className= "App">
         <div className ="Card">
@@ -40,14 +50,26 @@ class App extends Component {
               <li key={item.id}>
                 <h3>Value: ${item.value}</h3>
                 <h3>Question: {item.question}</h3> 
-                Answer: {item.answer} 
+                {
+                  this.state.showMe?
+                  <div>
+                  Answer: {item.answer} 
+                  </div>
+                  :null
+                }
+
+                  <button onClick={()=>this.operation()}>Answer Revel
+                  </button>
               </li>
             ))}
           </ul>
 
-          <button className ="button" onClick={this.fetch}>
+          <div className ="button"> 
+          <button className= "btn btn-default" onClick={this.fetch}>
             <span>Next question, Alex</span>
           </button>
+
+          </div>
           </div>
       </div>
     );

@@ -34,7 +34,7 @@
     font-family: 'Notable', sans-serif;
 }
 
-.button {
+.button, .btn {
     position: relative;
     outline: none;
     text-decoration: none;
@@ -51,6 +51,8 @@
     border: 1px solid rgba(22, 76, 167, 0.6);
     font-family: 'Notable', sans-serif;
   }
+
+  
     
   .button span {
     color: #164ca7;
