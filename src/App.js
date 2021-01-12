@@ -21,7 +21,7 @@ class App extends Component {
   }
 
 jeopardy() {    
-fetch('http://jservice.io/api/random')
+fetch('https://jservice.io/api/random')
 .then(res => res.json())
 .then(json => {
   this.setState({
@@ -42,9 +42,6 @@ fetch('http://jservice.io/api/random')
       })
     })
     */
-   this.setState({
-     isLoaded: true
-   })
   }
 
   render() {
