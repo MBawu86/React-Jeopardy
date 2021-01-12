@@ -42,6 +42,9 @@ fetch('http://jservice.io/api/random')
       })
     })
     */
+   this.setState({
+     isLoaded: true
+   })
   }
 
   render() {
