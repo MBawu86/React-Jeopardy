@@ -27,6 +27,7 @@ fetch('http://jservice.io/api/random')
   this.setState({
     isLoaded: true,
     items: json,
+    showMe: false
   })
 })
 
